@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="be2TestingSuite" duration-ms="11143" started-at="2018-10-08T21:14:58Z" finished-at="2018-10-08T21:15:09Z">
+    <groups>
+    </groups>
+    <test name="LoginTests" duration-ms="5734" started-at="2018-10-08T21:14:58Z" finished-at="2018-10-08T21:15:04Z">
+      <class name="tests.LoginTests">
+        <test-method status="PASS" signature="testSetup(org.testng.ITestContext)[pri:0, instance:tests.LoginTests@3f49dace]" name="testSetup" is-config="true" duration-ms="8" started-at="2018-10-08T21:14:58Z" finished-at="2018-10-08T21:14:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@45efc20d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetup -->
+        <test-method status="PASS" signature="logIn(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.LoginTests@3f49dace]" name="logIn" duration-ms="5705" started-at="2018-10-08T21:14:58Z" finished-at="2018-10-08T21:15:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.be2.com.au]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://app2.be2.com/index.html#/home]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[vadym.butlerovskyi@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Qwerty123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logIn -->
+      </class> <!-- tests.LoginTests -->
+    </test> <!-- LoginTests -->
+    <test name="MailboxTests" duration-ms="713" started-at="2018-10-08T21:15:04Z" finished-at="2018-10-08T21:15:04Z">
+      <class name="tests.MailboxTests">
+        <test-method status="PASS" signature="testSetup(org.testng.ITestContext)[pri:0, instance:tests.MailboxTests@3c0f93f1]" name="testSetup" is-config="true" duration-ms="1" started-at="2018-10-08T21:15:04Z" finished-at="2018-10-08T21:15:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3e5499cc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetup -->
+        <test-method status="PASS" signature="checkWelcomeMsg(java.lang.String)[pri:0, instance:tests.MailboxTests@3c0f93f1]" name="checkWelcomeMsg" duration-ms="711" started-at="2018-10-08T21:15:04Z" finished-at="2018-10-08T21:15:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dear new be2 Member We are very happy to welcome you.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkWelcomeMsg -->
+      </class> <!-- tests.MailboxTests -->
+    </test> <!-- MailboxTests -->
+    <test name="MyProfileTests" duration-ms="816" started-at="2018-10-08T21:15:04Z" finished-at="2018-10-08T21:15:05Z">
+      <class name="tests.MyProfileTests">
+        <test-method status="PASS" signature="testSetup(org.testng.ITestContext)[pri:0, instance:tests.MyProfileTests@4e1d422d]" name="testSetup" is-config="true" duration-ms="0" started-at="2018-10-08T21:15:04Z" finished-at="2018-10-08T21:15:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@67ab1c47]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetup -->
+        <test-method status="PASS" signature="validateAge(java.lang.String)[pri:0, instance:tests.MyProfileTests@4e1d422d]" name="validateAge" duration-ms="712" started-at="2018-10-08T21:15:04Z" finished-at="2018-10-08T21:15:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[26]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAge -->
+        <test-method status="PASS" signature="validateEducation(java.lang.String)[pri:0, instance:tests.MyProfileTests@4e1d422d]" name="validateEducation" duration-ms="100" started-at="2018-10-08T21:15:05Z" finished-at="2018-10-08T21:15:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Masters]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateEducation -->
+      </class> <!-- tests.MyProfileTests -->
+    </test> <!-- MyProfileTests -->
+    <test name="PaymentTests" duration-ms="3808" started-at="2018-10-08T21:15:05Z" finished-at="2018-10-08T21:15:09Z">
+      <class name="tests.PaymentTests">
+        <test-method status="PASS" signature="extentReportSetup()[pri:0, instance:tests.PaymentTests@2ac273d3]" name="extentReportSetup" is-config="true" duration-ms="4638" started-at="2018-10-08T21:14:53Z" finished-at="2018-10-08T21:14:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentReportSetup -->
+        <test-method status="PASS" signature="testSetup(org.testng.ITestContext)[pri:0, instance:tests.PaymentTests@2ac273d3]" name="testSetup" is-config="true" duration-ms="1" started-at="2018-10-08T21:15:05Z" finished-at="2018-10-08T21:15:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@b78a709]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetup -->
+        <test-method status="PASS" signature="verifyPayPalAvailability()[pri:0, instance:tests.PaymentTests@2ac273d3]" name="verifyPayPalAvailability" duration-ms="3805" started-at="2018-10-08T21:15:05Z" finished-at="2018-10-08T21:15:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPayPalAvailability -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.PaymentTests@2ac273d3]" name="afterSuite" is-config="true" duration-ms="280" started-at="2018-10-08T21:15:09Z" finished-at="2018-10-08T21:15:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:tests.PaymentTests@2ac273d3]" name="cleanUp" is-config="true" duration-ms="769" started-at="2018-10-08T21:15:09Z" finished-at="2018-10-08T21:15:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- tests.PaymentTests -->
+    </test> <!-- PaymentTests -->
+  </suite> <!-- be2TestingSuite -->
+</testng-results>
