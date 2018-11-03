@@ -7,7 +7,7 @@ import pages.BasePage;
 
 public class PaymentTests extends BasePage {
 
-	@Test	
+	@Test(groups= {"smoke", "regression"})
 	public void verifyPayPalAvailability () {
 		payment.gotoPayment();
 		payment.waitForPaymentPackages();

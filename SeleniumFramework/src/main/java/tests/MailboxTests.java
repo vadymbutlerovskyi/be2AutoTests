@@ -9,7 +9,7 @@ import pages.BasePage;
 public class MailboxTests extends BasePage {
 
 	@Parameters("msgWelcome")
-	@Test	
+	@Test(groups= {"smoke"})
 	public void checkWelcomeMsg (String msgWelcome) {
 		Integer lengthWelc = msgWelcome.length();		
 		BasePage.mailbox.goToMailbox();

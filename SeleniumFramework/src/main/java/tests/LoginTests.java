@@ -8,7 +8,7 @@ import pages.BasePage;
 public class LoginTests extends BasePage {
 		
 	@Parameters({"login", "home", "email", "password"})
-	@Test	
+	@Test(groups= {"sanity"})
 	public void logIn (String login, String home, String email, String password) {
 		baseTest.goToUrl(login);
 		baseTest.waitForPageLoaded(5);

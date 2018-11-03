@@ -27,7 +27,7 @@ public class BasePage {
 	public static MyProfilePage myProfile;
 	public static PaymentPage payment;
 
-	@BeforeSuite
+	@BeforeSuite(alwaysRun=true)
 	public void extentReportSetup() {
 		htmlReporter = new ExtentHtmlReporter("extent.html");
 		extent = new ExtentReports();
@@ -44,7 +44,7 @@ public class BasePage {
 		payment = new PaymentPage(baseTest._driver, baseTest.report);
 	}
 	
-	@BeforeTest
+	@BeforeTest(alwaysRun=true)
 	public void testSetup(final ITestContext testContext){
 
 		String currentTestName = testContext.getName();
@@ -66,12 +66,12 @@ public class BasePage {
 		}		
 	}
 
-	@AfterSuite
+	@AfterSuite(alwaysRun=true)
 	public void afterSuite() {
 		extent.flush();
 	}
 	
-	@AfterSuite
+	@AfterSuite(alwaysRun=true)
 	public void cleanUp() {
 		baseTest.tearDown();
 	}

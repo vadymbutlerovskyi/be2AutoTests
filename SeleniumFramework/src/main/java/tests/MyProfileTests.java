@@ -9,7 +9,7 @@ import pages.BasePage;
 public class MyProfileTests extends BasePage  {
 
 	@Parameters("age")
-	@Test	
+	@Test(groups= {"smoke", "regression"})
 	public void validateAge (String age) 
 	{
 		loginLogout.clickOnAvatarImg();
@@ -18,7 +18,7 @@ public class MyProfileTests extends BasePage  {
 	}
 
 	@Parameters("education")
-	@Test	
+	@Test(groups= {"smoke", "regression"})
 	public void validateEducation (String education) 
 	{
 		loginLogout.clickOnAvatarImg();
