@@ -6,10 +6,11 @@ import org.testng.annotations.Test;
 
 import pages.BasePage;
 
+@Test(groups= {"smoke", "regression"})
 public class MyProfileTests extends BasePage  {
 
 	@Parameters("age")
-	@Test(groups= {"smoke", "regression"})
+	@Test
 	public void validateAge (String age) 
 	{
 		loginLogout.clickOnAvatarImg();
@@ -18,7 +19,7 @@ public class MyProfileTests extends BasePage  {
 	}
 
 	@Parameters("education")
-	@Test(groups= {"smoke", "regression"})
+	@Test
 	public void validateEducation (String education) 
 	{
 		loginLogout.clickOnAvatarImg();

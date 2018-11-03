@@ -8,20 +8,12 @@
   <parameter name="email" value="vadym.butlerovskyi@gmail.com"/>
   <parameter name="age" value="26"/>
   <parameter name="home" value="https://app2.be2.com/index.html#/home"/>
-  <test thread-count="5" name="LoginTests(failed)">
-    <classes>
-      <class name="tests.LoginTests">
-        <methods>
-          <include name="extentReportSetup"/>
-          <include name="afterSuite"/>
-          <include name="cleanUp"/>
-          <include name="logIn" invocation-numbers="0"/>
-          <include name="testSetup"/>
-        </methods>
-      </class> <!-- tests.LoginTests -->
-    </classes>
-  </test> <!-- LoginTests(failed) -->
-  <test thread-count="5" name="MailboxTest(failed)">
+  <test thread-count="5" name="MailboxTests(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
       <class name="tests.MailboxTests">
         <methods>
@@ -33,32 +25,5 @@
         </methods>
       </class> <!-- tests.MailboxTests -->
     </classes>
-  </test> <!-- MailboxTest(failed) -->
-  <test thread-count="5" name="MyProfileTests(failed)">
-    <classes>
-      <class name="tests.MyProfileTests">
-        <methods>
-          <include name="validateAge" invocation-numbers="0"/>
-          <include name="extentReportSetup"/>
-          <include name="afterSuite"/>
-          <include name="validateEducation" invocation-numbers="0"/>
-          <include name="cleanUp"/>
-          <include name="testSetup"/>
-        </methods>
-      </class> <!-- tests.MyProfileTests -->
-    </classes>
-  </test> <!-- MyProfileTests(failed) -->
-  <test thread-count="5" name="PaymentTests(failed)">
-    <classes>
-      <class name="tests.PaymentTests">
-        <methods>
-          <include name="verifyPayPalAvailability"/>
-          <include name="extentReportSetup"/>
-          <include name="afterSuite"/>
-          <include name="cleanUp"/>
-          <include name="testSetup"/>
-        </methods>
-      </class> <!-- tests.PaymentTests -->
-    </classes>
-  </test> <!-- PaymentTests(failed) -->
+  </test> <!-- MailboxTests(failed) -->
 </suite> <!-- Failed suite [be2TestingSuite] -->

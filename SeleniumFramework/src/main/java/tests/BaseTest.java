@@ -3,6 +3,7 @@ package tests;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -15,6 +16,7 @@ public class BaseTest {
 
 	public WebDriver _driver;
 	public static String browser;
+	public static String headless;
 	static String driverPath;
 	public static ExtentTest report;
 
@@ -28,8 +30,15 @@ public class BaseTest {
 		PropertiesFile.getProperties();
 		if(browser.equalsIgnoreCase("chrome")) {
 			driverPath = System.getProperty("user.dir") + "/drivers/chromedriver/chromedriver.exe";
-			System.setProperty("webdriver.chrome.driver", driverPath);
-			_driver = new ChromeDriver();
+			System.setProperty("webdriver.chrome.driver", driverPath);			
+			if(headless.equalsIgnoreCase("true")) {
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("headless");
+				_driver = new ChromeDriver(options);
+			}
+			else {		
+				_driver = new ChromeDriver();
+			}
 		}
 		else if (browser.equalsIgnoreCase("firefox")) {
 			driverPath = System.getProperty("user.dir") + "/drivers/geckodriver/geckodriver.exe";

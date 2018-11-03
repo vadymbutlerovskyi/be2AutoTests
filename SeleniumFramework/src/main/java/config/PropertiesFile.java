@@ -16,6 +16,7 @@ public class PropertiesFile {
 			InputStream input = new FileInputStream(propPath);
 			prop.load(input);
 			BaseTest.browser = prop.getProperty("browser");
+			BaseTest.headless = prop.getProperty("headless");
 		}
 		catch (Exception exp) {
 			exp.printStackTrace();
