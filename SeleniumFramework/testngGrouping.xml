@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="be2TestingSuite">
+    <parameter name="login"	value="https://www.be2.com.au" />
+	<parameter name="home" value="https://app2.be2.com/index.html#/home" />
+	<parameter name="email"	value="vadym.butlerovskyi@gmail.com" />
+	<parameter name="password" value="Qwerty123" />
+	<parameter name="msgWelcome" value="Dear new be2 Member We are very happy to welcome you." />
+	<parameter name="age" value="26" />
+	<parameter name="education" value="Masters" />	
+	<test thread-count="3" name="LoginTests">
+		<groups>
+		    <run>
+		        <include name="sanity"/>
+		    </run>
+		</groups>		
+		<classes>
+			<class name="tests.LoginTests"/>
+		</classes>
+	</test> <!-- LoginTests -->
+	<test thread-count="3" name="MailboxTests">
+	    <groups>
+		    <run>
+		        <include name="smoke"/>
+		    </run>
+		</groups>	
+		<classes>
+			<class name="tests.MailboxTests"/>
+		</classes>
+	</test> <!-- MailboxTest -->	
+	<test thread-count="3" name="MyProfileTests">
+	    <groups>
+		    <run>
+		        <include name="smoke"/>
+		    </run>
+		</groups>
+		<classes>
+			<class name="tests.MyProfileTests"/>
+		</classes>
+	</test> <!-- MyProfileTests -->
+	<test thread-count="3" name="PaymentTests">
+	    <groups>
+		    <run>
+		        <include name="regression"/>
+		    </run>
+		</groups>
+		<classes>
+			<class name="tests.PaymentTests"/>
+		</classes>
+	</test> <!-- PaymentTests -->
+</suite> <!-- be2TestingSuite -->
